@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/25b2b9b1-9dbd-4e65-bc28-c1749b2d045e/resourceGroups/Frank-pj/providers/Microsoft.Web/sites/afFrank",
+    "appService.deploySubpath": "."
+}
