@@ -40,7 +40,12 @@ section{
 }
 
 .slide-div{
+    width: 30rem;
     white-space: nowrap;
+}
+
+.card{
+    background: none;
 }
 
 div.scrollmenu a {
@@ -51,12 +56,13 @@ div.scrollmenu a {
     text-decoration: none;
   }
 
+
 .img-slide{
     position: relative;
-    width: 30rem;
+    width: 100%;
     height: 30rem;
     transition: .5s;
-    margin: 1rem;
+    padding: 2rem;
     object-fit: cover;
 }
 
@@ -135,3 +141,58 @@ h4{
     justify-content: center;
     align-items: center;
 }
+
+
+h1 {
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+  }
+  .scrollable-card-grid {
+    scrollbar-color: #201c29;
+    scrollbar-width: 10px;
+    scrollbar-gutter: always;
+    padding: 3rem;
+    display: -webkit-box;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .scrollable-card {
+    min-width: 300px;
+    min-height: 350px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    margin: 0;
+    &:hover {
+      -webkit-transform: translateY(-1rem);
+      transform: translateY(-1rem);
+      cursor: pointer;
+      ~ .scrollable-card {
+        -webkit-transform: translateX(130px);
+        transform: translateX(130px);
+      }
+    }
+    &:not(:first-child) {
+      margin-left: -130px;
+    }
+  }
+  
+  .card-header {
+    h2 {
+      color: #fff;
+      font-size: 20px;
+      margin: .25rem 0 auto;
+    }
+  }
+
