@@ -11,7 +11,7 @@ export class PortfolioserviceService {
     {
       title: "22simba - PER I ROIZ",
       description: "Questo video è incredibile",
-      src: "assets/images/22simba - PER I ROIZ.jpg",
+      src: "assets/images/22simba-PERIROIZ.jpg",
       videosrc: "https://affrankstorage.blob.core.windows.net/contsinerfrank/videos/22simba - PER I ROIZ.webm"
   },
   {
@@ -23,7 +23,7 @@ export class PortfolioserviceService {
   {
     title: "22simba - Proteggimi",
       description: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-      src: "assets/images/Blu parte 2.jpeg",
+      src: "assets/images/Bluparte2.jpeg",
       videosrc:"https://affrankstorage.blob.core.windows.net/contsinerfrank/videos/22simba - Proteggimi def.mp4"
   },
   {
@@ -41,7 +41,7 @@ export class PortfolioserviceService {
   {
     title: "PYT - STELLA BLU",
       description: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-      src: "assets/images/PYT - STELLA BLU.jpg",
+      src: "assets/images/PYT-STELLA BLU.jpg",
       videosrc:"https://affrankstorage.blob.core.windows.net/contsinerfrank/videos/PYT - STELLA BLU (prod. Garelli, YaluDream) [Official Video].webm"
   },
   {
@@ -59,7 +59,7 @@ export class PortfolioserviceService {
   {
     title: "Funny - MOON WALK",
       description: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-      src: "assets/images/sfondo nero def.jpg",
+      src: "assets/images/sfondonerodef.jpg",
       videosrc:"https://affrankstorage.blob.core.windows.net/contsinerfrank/videos/Funny Contenuto corretto.mp4"
   }
   ]
