@@ -12,8 +12,8 @@ export class PortfolioComponent implements OnInit {
   constructor( public portfolioservice: PortfolioserviceService) { }
 
   guarda = false
-  fs = require('fs');
-  dir = "../../../assets/images/work"
+  // fs = require('fs');
+  // dir = "../../../assets/images/work"
   //files = this.fs.readdirSync(this.dir)
   
   public vsrc?: string;
@@ -41,7 +41,7 @@ export class PortfolioComponent implements OnInit {
     this.guarda = true;
   }
 
-  path = require('path');
+  // path = require('path');
 
   GetFile(){
     // const directoryPath = this.path.join(__dirname, 'work');

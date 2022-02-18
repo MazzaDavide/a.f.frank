@@ -22,15 +22,15 @@ export class FotoComponent implements OnInit {
   }
 
 
-  GetFoto() {
-    var fs = require('fs')
-    fs.readdir(this.folder, (files: any) => {
-      files.forEach((file: any) => {
-        this.foto = file;
-        console.log(this.foto);
-      });
-    });
-  }
+  // GetFoto() {
+  //   var fs = require('fs')
+  //   fs.readdir(this.folder, (files: any) => {
+  //     files.forEach((file: any) => {
+  //       this.foto = file;
+  //       console.log(this.foto);
+  //     });
+  //   });
+  // }
 
   AllFoto = [
     "https://affrankstorage.blob.core.windows.net/contsinerfrank/images/work/Blocco def senza titolo.jpg",

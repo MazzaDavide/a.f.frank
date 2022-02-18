@@ -1,4 +1,4 @@
-<div class="">
+<!-- <div class="">
     <div class="row content">
         <div class="col img">
             <img [src]=this.portfolioservice.videoimg id="img">
@@ -10,19 +10,8 @@
     </div>
 </div>
 
-<!-- <section>
-    <div class="slide-container">
-        <div class="image-slider" *ngFor="let video of AllVideos">
-            <div class="card slide-div" id="slide-1">
-                <img src="{{video.src}}" (click)="GetSrc(video)" class="img-slide" id="img1">
-                <p class="title">{{video.title}}</p>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <div class="container">
-    <h1>GUARDA AMCHE</h1>
+    <h1>GUARDA ANCHE</h1>
     <div class="scrollable-card-grid">
       <div *ngFor="let video of AllVideos">
           <div class="scrollable-card" (click)="GetSrc(video)" style="background: url({{video.src}}); background-size: cover; background-repeat: no-repeat;">
@@ -30,44 +19,73 @@
                 <h2>{{video.title}}</h2>
               </div>
               <div class="card-body">
-                  <!-- <img src="{{video.src}}" (click)="GetSrc(video)" class="img-slide" id="img1"> -->
+                  
               </div>
           </div>
       </div>
     </div>
-</div>
+</div> -->
 
+<body>
+    <div class="video-page">
+        <div class="video-page-header">
+            <div class="video-description">
+                <div class="header-left">
+                    <img [src]=this.portfolioservice.videoimg>
+                </div>
+                <div class="header-right">
+                    <h1>{{this.portfolioservice.title}}</h1>
+                    <h2>{{this.portfolioservice.date}}<span>2h05</span></h2>
+                    <p>Descrizione del video</p>
+                    <div class="rating">8.9</div>
+                    <div class='info'>
+                        <h4>Regia e montaggio</h4>
+                        <h5>{{this.portfolioservice.direct}}</h5>
+                    </div>
+                    <div class='info' *ngIf="this.portfolioservice.colorist">
+                        <h4>Colorist: </h4>
+                        <a href="{{this.portfolioservice.colorist}}"><h5>{{this.portfolioservice.colorist}}</h5></a>
+                    </div>
+                    <div class='info' *ngIf="this.portfolioservice.others">
+                        <h4>3D Artist:</h4>
+                        <a href="{{this.portfolioservice.others}}"><h5>{{this.portfolioservice.others}}</h5></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="streaming-container">
+                <video [src]=this.portfolioservice.vsrc controls muted ></video>
+            </div>
+        </div>
 
-
-
-
-<!-- <section aria-label="video">
-    <div class="carousel" data-carousel>
-        <button class="carousel-button prev" data-carousel-button="prev">&#8592;</button>
-        <button class="carousel-button next" data-carousel-button="next">&#8594;</button>
-        <ul *ngFor="let card of AllVideos" data-slides>
-            <li class="slide" data-active>
-                <img src="{{card.src}}" alt="video #1">
-            </li>
-        </ul>
+        <!-- <div class="comments-container">
+            <h1>Comments</h1>
+            <div class="one-comment">
+                <img class="profile-img"
+                    src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
+                <div class='comment-content'>
+                    <h4>Alicia<span>1 month ago</span></h4>
+                    <p>Great movie ! </p>
+                </div>
+            </div>
+            <div class="one-comment">
+                <img class="profile-img"
+                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1631&q=80">
+                <div class='comment-content'>
+                    <h4>John<span>2 month ago</span></h4>
+                    <p>Great movie ! </p>
+                </div>
+            </div>
+            <div class="add-comment">
+                <img class="profile-img"
+                    src="https://images.unsplash.com/photo-1502292754603-a0891e807332?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80">
+                <div class="submit-comment">
+                    <input type="text" placeholder="Add Comment">
+                    <div class="submit">Comment</div>
+                </div>
+            </div> 
+        </div>-->
+         <app-scroll-cards></app-scroll-cards>
     </div>
-</section> -->
-<!-- 
-<script>
-    const buttons = document.querySelector("[data-carousel-button]")
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const offset = button.dataset.carouselButton === "next" ? 1 : -1
-            const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
-
-            const activeSlide = slides.querySelector("[data-active]")
-            let newIndex = [...slides.children].indexOf(activeSlide) + offset
-            if(newIndex < 0)
-                newIndex = slides.children.length - 1
-            if(newIndex > slides.children.length) newIndex = 0
-
-            slides.children[newIndex].dataset.active = true
-            delete activeSlide.dataset.active
-        })
-    })
-</script> -->
+</body>

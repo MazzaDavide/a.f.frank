@@ -18,6 +18,7 @@ export class PlayervideoComponent implements OnInit {
   AllVideos =  this.portfolioservice.AllVideos
 
   ngOnInit(): void {
+    
   }
 
   GetSrc(card: any){
